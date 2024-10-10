@@ -210,8 +210,8 @@ async function addAllListItemsToCart(): Promise<void> {
   ga.addItemsToCart(products);
   void pushHistoricalEvent({
     eventType: "addToCart",
-    sessionId: cart.value?.id,
-    productIds: products.map((product) => product.id),
+    // sessionId: cart.value?.id,
+    // productIds: products.map((product) => product.id),
     storeId: globals.storeId,
   });
 
@@ -290,7 +290,7 @@ async function addOrUpdateCartItem(item: PreparedLineItemType, quantity: number)
     ga.addItemToCart(lineItem.product, quantity);
     void pushHistoricalEvent({
       eventType: "addToCart",
-      sessionId: cart.value?.id,
+      // sessionId: cart.value?.id,
       productId: lineItem.product.id,
       storeId: globals.storeId,
     });

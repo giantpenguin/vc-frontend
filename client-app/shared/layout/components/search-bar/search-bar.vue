@@ -233,7 +233,7 @@ async function searchAndShowDropdownResults(): Promise<void> {
         getFilterExpressionForZeroPrice(!!zero_price_product_enabled, currencyCode),
       ]
         .filter(Boolean)
-        .join(" ");
+        .join(",");
 
   const params: GetSearchResultsParamsType = {
     keyword: trimmedSearchPhrase.value,

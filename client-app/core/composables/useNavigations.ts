@@ -163,7 +163,7 @@ export function useNavigations() {
               getFilterExpressionForInStock(true),
             ]
               .filter(Boolean)
-              .join(" ");
+              .join(",");
 
         catalogMenuItems.value = (
           await getChildCategories({

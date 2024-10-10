@@ -14,8 +14,8 @@
           </li>
         </template>
 
-        <!-- Last breadcrumbs item -->
-        <li v-else class="vc-breadcrumbs__item">{{ item.title }}</li>
+        <!-- Last breadcrumbs item
+        <li v-else class="vc-breadcrumbs__item">{{ item.title }}</li> -->
       </template>
     </ol>
   </nav>

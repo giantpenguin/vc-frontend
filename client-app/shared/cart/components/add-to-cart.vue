@@ -169,7 +169,7 @@ async function onChange() {
     ga.addItemToCart(props.product, inputQuantity);
     void pushHistoricalEvent({
       eventType: "addToCart",
-      sessionId: cart.value?.id,
+      // sessionId: cart.value?.id,
       productId: props.product.id,
       storeId: globals.storeId,
     });

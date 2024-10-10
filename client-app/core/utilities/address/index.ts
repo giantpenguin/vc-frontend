@@ -1,4 +1,5 @@
 import { clone, isEqual, pick } from "lodash";
+import { computed } from "vue";
 import type { AnyAddressType } from "../../types";
 import type { InputMemberAddressType, MemberAddressType } from "@/core/api/graphql/types";
 
@@ -52,3 +53,9 @@ export function isEqualAddresses(
 export function isMemberAddressType(address: AnyAddressType): address is MemberAddressType {
   return typeof address === "object" && address !== null && "description" in address;
 }
+
+//NOTE: return default MemberAddressType
+//TODO: *default* countryCode, postalCode should be from outside config/settings
+export const defaultMemberAddress = computed<MemberAddressType>(() => {
+  return { countryCode: "VNM", postalCode: "10000", isDefault: false, isFavorite: false };
+});

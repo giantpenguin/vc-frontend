@@ -1,4 +1,5 @@
 # compiled output
+app_dist
 artifacts
 assets/*
 dist

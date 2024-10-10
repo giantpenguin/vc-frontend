@@ -4,7 +4,8 @@
     <!-- Main content -->
     <div class="main">
       <div class="container mx-auto px-6 pb-40 pt-32 md:px-12">
-        <div class="px-6 text-center text-3xl font-bold">
+        <CategoriesRow />
+        <!-- <div class="px-6 text-center text-3xl font-bold">
           {{ $t("pages.home.feature_descriptions_block.title") }}
         </div>
         <div class="mx-auto mt-24 flex flex-wrap justify-between">
@@ -52,7 +53,7 @@
               {{ $t("pages.home.feature_descriptions_block.feature_4") }}
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -83,6 +84,7 @@ import { shallowRef, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { usePageHead } from "@/core/composables";
 import { LoginFormSection } from "@/shared/layout";
+import CategoriesRow from "@/shared/catalog/components/categories-row.vue";
 
 const { t } = useI18n();
 
@@ -104,8 +106,8 @@ watch(homePageAnchorIsVisible, (value) => {
 
 <style scoped>
 .main {
-  background-image: url(/images/home/bevel-top.webp), url(/images/home/bevel-bottom.webp),
-    url(/images/home/hexa-left.webp), url(/images/home/hexa-right.webp);
+  background-image: url(/static/images/home/bevel-top.webp), url(/static/images/home/bevel-bottom.webp),
+    url(/static/images/home/hexa-left.webp), url(/static/images/home/hexa-right.webp);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 100%, 100%, auto, auto;
   background-position:

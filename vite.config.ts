@@ -90,6 +90,9 @@ export default defineConfig(({ command, mode }): UserConfig => {
     build: {
       emptyOutDir: true,
       sourcemap: true,
+      outDir: "./app_dist",
+      // manifest: true - generate a manifest file (outDir/.vite/manifest.json) contains the built assets' paths
+      // manifest: true
     },
     optimizeDeps: {
       exclude: ["swiper/vue", "swiper/types"],

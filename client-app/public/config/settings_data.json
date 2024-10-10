@@ -1,47 +1,35 @@
 {
-  "current": "default",
+  "current": "retro inspired",
   "settings": {
     "show_details_in_separate_tab": true,
-
     "files_enabled": true,
-
     "push_messages_enabled": true,
-
     "quotes_enabled": true,
     "quotes_files_scope": "quote-attachments",
-
     "product_compare_enabled": true,
-    "product_compare_limit": 5,
+    "product_compare_limit": 3,
     "product_filters_sorting": false,
     "product_filters_sorting_direction": "asc",
-
-    "vendor_enabled": true,
-    "vendor_rating_enabled": true,
+    "vendor_enabled": false,
+    "vendor_rating_enabled": false,
     "categories_limit": 499,
     "wishlists_limit": 10,
-
-    "search_min_chars": 2,
+    "search_min_chars": 3,
     "search_max_chars": 400,
     "search_static_content_suggestions_enabled": true,
     "search_product_phrase_suggestions_enabled": false,
-
     "zero_price_product_enabled": false,
-
     "checkout_multistep_enabled": true,
     "checkout_comment_enabled": true,
     "checkout_purchase_order_enabled": true,
     "checkout_coupon_enabled": true,
     "checkout_gifts_enabled": true,
-
     "isCVVinSkyflowRequired": false,
-
     "default_return_url": "/",
-
     "logo_image": "/static/images/common/logo.svg",
     "logo_inverted_image": "/static/images/common/logo-white.svg",
     "favicon_image": "/static/icons/favicon-32x32.png",
     "homepage_background_image": "/static/images/home/main-banner.webp",
-
     "image_thumbnails_enabled": true,
     "image_thumbnails_original_fallback_enabled": true,
     "image_thumbnails_suffixes": {
@@ -50,7 +38,6 @@
       "lg": "lg"
     },
     "image_carousel_in_product_card_enabled": true,
-
     "orders_statuses": [
       {
         "code": "New",
@@ -83,7 +70,6 @@
         "variant": "outline-dark"
       }
     ],
-
     "quote_statuses": [
       {
         "code": "New",
@@ -121,7 +107,6 @@
         "variant": "outline-dark"
       }
     ],
-
     "line_items_group_by_vendor_enabled": true,
     "social_sharing_services": [
       {

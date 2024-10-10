@@ -10,9 +10,10 @@
       <div v-if="support_phone_number" class="flex items-center">
         <VcIcon class="me-1.5 text-primary" name="phone" size="sm" />
 
+        <!-- don't want to show text
         <span class="mr-1 font-thin">
           {{ $t("shared.layout.header.top_header.call_us_label") }}
-        </span>
+        </span> -->
 
         <a
           class="py-1 font-bold text-[--header-top-link-color] hover:text-[--header-top-link-hover-color]"

@@ -1387,6 +1387,11 @@
       "message": "@:common.messages.blocked"
     }
   },
+  "blocks": {
+    "featuredCategories": {
+      "title": "Featured Categories"
+    }
+  },
   "ui_kit": {
     "pagination": {
       "previous": "Previous",

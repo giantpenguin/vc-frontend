@@ -367,7 +367,7 @@ const searchParams = computedEager<ProductsSearchParamsType>(() => ({
     getFilterExpressionForAvailableIn(localStorageBranches.value),
   ]
     .filter(Boolean)
-    .join(" "),
+    .join(","),
 }));
 
 const { getSettingValue } = useModuleSettings(MODULE_XAPI_KEYS.MODULE_ID);
@@ -387,7 +387,7 @@ async function updateFiltersSidebar(newFilters: ProductsFiltersType): Promise<vo
       getFilterExpressionForAvailableIn(newFilters.branches),
     ]
       .filter(Boolean)
-      .join(" "),
+      .join(","),
   };
 
   updateProductsFilters({

@@ -7,7 +7,7 @@ import { createOrderFromCart as _createOrderFromCart } from "@/core/api/graphql"
 import { useGoogleAnalytics, useHistoricalEvents, useThemeContext } from "@/core/composables";
 import { AddressType, ProductType } from "@/core/enums";
 import { globals } from "@/core/globals";
-import { isEqualAddresses, Logger } from "@/core/utilities";
+import { isEqualAddresses, defaultMemberAddress, Logger } from "@/core/utilities";
 import { useUser, useUserAddresses, useUserCheckoutDefaults } from "@/shared/account";
 import { useFullCart, EXTENDED_DEBOUNCE_IN_MS } from "@/shared/cart";
 import { useOrganizationAddresses } from "@/shared/company";
@@ -330,7 +330,7 @@ export function _useCheckout() {
 
         onAddNewAddress() {
           setTimeout(() => {
-            openAddOrUpdateAddressModal(addressType);
+            openAddOrUpdateAddressModal(addressType, defaultMemberAddress.value);
           }, 500);
         },
       },
@@ -352,13 +352,16 @@ export function _useCheckout() {
   function onDeliveryAddressChange(): void {
     addresses.value.length
       ? openSelectAddressModal(AddressType.Shipping)
-      : openAddOrUpdateAddressModal(AddressType.Shipping, shipment.value?.deliveryAddress);
+      : openAddOrUpdateAddressModal(
+          AddressType.Shipping,
+          shipment.value?.deliveryAddress ?? defaultMemberAddress.value,
+        );
   }
 
   function onBillingAddressChange(): void {
     addresses.value.length
       ? openSelectAddressModal(AddressType.Billing)
-      : openAddOrUpdateAddressModal(AddressType.Billing, payment.value?.billingAddress);
+      : openAddOrUpdateAddressModal(AddressType.Billing, payment.value?.billingAddress ?? defaultMemberAddress.value);
   }
 
   function getNewAddresses(payload: {
@@ -458,8 +461,8 @@ export function _useCheckout() {
       ga.placeOrder(placedOrder.value);
       void pushHistoricalEvent({
         eventType: "placeOrder",
-        sessionId: placedOrder.value.id,
-        productIds: placedOrder.value.items?.map((item) => item.productId),
+        // sessionId: placedOrder.value.id,
+        // productIds: placedOrder.value.items?.map((item) => item.productId),
         storeId: globals.storeId,
       });
 

@@ -2,9 +2,10 @@
   <VcDropdownMenu placement="bottom-end" width="7.5rem" class="h-full">
     <template #trigger="{ opened }">
       <button type="button" class="flex h-full items-center gap-x-1.5">
+        <!-- don't want to show text
         <span class="text-sm">
           {{ $t("shared.layout.currency_selector.label") }}
-        </span>
+        </span> -->
 
         <span class="uppercase text-[--header-top-link-color] hover:text-[--header-top-link-hover-color]">
           {{ currentCurrency.code }}

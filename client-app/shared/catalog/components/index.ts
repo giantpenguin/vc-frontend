@@ -1,4 +1,6 @@
 export { default as CarouselProductCard } from "./carousel-product-card.vue";
+export { default as CategoriesRow } from "./categories-row.vue";
+export { default as CategoryCard } from "./category/category-card.vue";
 export { default as CategorySelector } from "./category-selector.vue";
 export { default as CountInCart } from "./count-in-cart.vue";
 export { default as DiscountBadge } from "./discount-badge.vue";

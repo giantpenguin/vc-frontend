@@ -2,9 +2,10 @@
   <VcDropdownMenu placement="bottom-end" class="language-selector">
     <template #trigger="{ opened }">
       <button type="button" class="language-selector__button">
+        <!-- don't want to show text
         <span class="language-selector__label">
           {{ $t("shared.layout.language_selector.label") }}
-        </span>
+        </span> -->
 
         <VcImage
           :src="`/static/icons/flags/${getCountryCode(currentLanguage)}.svg`"
