@@ -1,5 +1,5 @@
 <template>
-  <VcButton class="identity-provider" variant="outline" color="secondary" @click="$emit('signIn')">
+  <VcButton class="identity-provider" variant="outline" color="primary" @click="$emit('signIn')">
     <template #prepend>
       <VcImage class="identity-provider__icon" :alt="text" :src="icon" />
     </template>

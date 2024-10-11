@@ -4,14 +4,10 @@
     "show_details_in_separate_tab": true,
     "files_enabled": true,
     "push_messages_enabled": true,
-    "quotes_enabled": true,
-    "quotes_files_scope": "quote-attachments",
     "product_compare_enabled": true,
     "product_compare_limit": 3,
     "product_filters_sorting": false,
     "product_filters_sorting_direction": "asc",
-    "vendor_enabled": false,
-    "vendor_rating_enabled": false,
     "categories_limit": 499,
     "wishlists_limit": 10,
     "search_min_chars": 3,
@@ -70,6 +66,8 @@
         "variant": "outline-dark"
       }
     ],
+    "quotes_enabled": true,
+    "quotes_files_scope": "quote-attachments",
     "quote_statuses": [
       {
         "code": "New",
@@ -107,6 +105,8 @@
         "variant": "outline-dark"
       }
     ],
+    "vendor_enabled": false,
+    "vendor_rating_enabled": false,
     "line_items_group_by_vendor_enabled": true,
     "social_sharing_services": [
       {
